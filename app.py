@@ -12,14 +12,12 @@ from langchain_community.llms import AzureOpenAI
 # Load environment
 load_dotenv()
 
-# Azure OpenAI setup
 llm = AzureOpenAI(
     openai_api_key=os.getenv("AZURE_OPENAI_API_KEY"),
     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
     deployment_name=os.getenv("AZURE_OPENAI_DEPLOYMENT"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
+    api_version="2023-12-01-preview",
 )
-
 # Sidebar for Db2 login
 st.sidebar.header("🔐 Db2 Login")
 db_user = st.sidebar.text_input("Username")

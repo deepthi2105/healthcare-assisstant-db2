@@ -1,0 +1,9 @@
+streamlit
+sqlalchemy
+ibm-db
+ibm-db-sa
+pandas
+langchain
+python-dotenv
+openai
+tiktoken
